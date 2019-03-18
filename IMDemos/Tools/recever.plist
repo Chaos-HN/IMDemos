@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>杨硕</string>
+			<key>receiverId</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>李阳光</string>
+			<key>receiverId</key>
+			<string>52</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>王州良</string>
+			<key>receiverId</key>
+			<string>13</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>项江洲</string>
+			<key>receiverId</key>
+			<string>12</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>明月</string>
+			<key>receiverId</key>
+			<string>6</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>王彬</string>
+			<key>receiverId</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>欧盟</string>
+			<key>receiverId</key>
+			<string>3147</string>
+		</dict>
+	</array>
+</array>
+</plist>

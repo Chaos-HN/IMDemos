@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "IMSocketUtils.h"
+#import "IMChatViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *isLogin = [defaults objectForKey:@"isLogin"];
+    if ([isLogin integerValue]!=1) {
+        LoginViewController *loginVc = [[LoginViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginVc];
+        self.window.backgroundColor = [UIColor whiteColor];
+        self.window.rootViewController = navi;
+    } else {
+        IMChatViewController *loginVc = [[IMChatViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginVc];
+        self.window.backgroundColor = [UIColor whiteColor];
+        self.window.rootViewController = navi;
+    }
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -28,13 +45,23 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[IMSocketUtils sharedManager] cutOffSocket];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *isLogin = [defaults objectForKey:@"isLogin"];
+
+    if ([isLogin integerValue]!=1) {
+        NSDictionary *dicts = @{@"name":[defaults objectForKey:@"accout"],@"pwd":[defaults objectForKey:@"pwd"],@"receiverId":[defaults objectForKey:@"receiverId"]};
+        [[LoginUtil sharedManager] loginAgainWithUser:dicts loginBlock:^{
+            [[IMSocketUtils sharedManager] getIMServer];
+        }];
+    } else {
+//        [[IMSocketUtils sharedManager] reconnectToServer];
+        [[IMSocketUtils sharedManager] getIMServer];
+    }
 }
 
 

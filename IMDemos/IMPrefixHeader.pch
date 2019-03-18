@@ -1,0 +1,36 @@
+//
+//  IMPrefixHeader.pch
+//  IMDemos
+//
+//  Created by oumeng on 2019/3/5.
+//  Copyright © 2019 OYKM. All rights reserved.
+//
+
+#ifndef IMPrefixHeader_pch
+#define IMPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "StringUtils.h"
+#import "HttpUtils.h"
+#import "LoginUtil.h"
+#import "XHToast.h"
+#import "NSDictionary+IMDict.h"
+#import "NSString+IMStr.h"
+#import "UIImage+IMImg.h"
+#import "UILabel+IMLbl.h"
+#import "UIView+IMView.h"
+#import "ConstantPart.h"
+
+// 后台地址
+#define HOSTAPI [NSString stringWithFormat:@"%@",@"https://vip.bdsaas.com"]
+
+#define indexAPI [NSString stringWithFormat:@"%@",@"/bdsaas/ajax"]
+
+#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
+
+#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+
+#endif /* IMPrefixHeader_pch */

@@ -7,12 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40B80D48DF4C8C1A7A53761C /* Pods_IMDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E5FBD43EEBFE8345E9BAC2 /* Pods_IMDemos.framework */; };
 		6217C72A222E06BE00EDEF10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C729222E06BE00EDEF10 /* AppDelegate.m */; };
 		6217C72D222E06BE00EDEF10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C72C222E06BE00EDEF10 /* ViewController.m */; };
 		6217C730222E06BE00EDEF10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6217C72E222E06BE00EDEF10 /* Main.storyboard */; };
 		6217C732222E06BF00EDEF10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6217C731222E06BF00EDEF10 /* Assets.xcassets */; };
 		6217C735222E06BF00EDEF10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6217C733222E06BF00EDEF10 /* LaunchScreen.storyboard */; };
 		6217C738222E06BF00EDEF10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C737222E06BF00EDEF10 /* main.m */; };
+		6217C741222E074F00EDEF10 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C740222E074F00EDEF10 /* LoginViewController.m */; };
+		6217C748222E08C700EDEF10 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C747222E08C700EDEF10 /* HttpUtils.m */; };
+		6217C74B222E0A4300EDEF10 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C74A222E0A4300EDEF10 /* StringUtils.m */; };
+		6217C74F222E12CE00EDEF10 /* NSString+IMStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C74E222E12CE00EDEF10 /* NSString+IMStr.m */; };
+		6217C752222E12F000EDEF10 /* NSDictionary+IMDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C751222E12F000EDEF10 /* NSDictionary+IMDict.m */; };
+		6217C758222E21E500EDEF10 /* IMSocketUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C757222E21E500EDEF10 /* IMSocketUtils.m */; };
+		6217C75A222E3B5800EDEF10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6217C759222E3B5800EDEF10 /* AVFoundation.framework */; };
+		6217C76D222E3D6000EDEF10 /* UIImage+IMImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C76C222E3D6000EDEF10 /* UIImage+IMImg.m */; };
+		6217C770222E3EA400EDEF10 /* UILabel+IMLbl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C76F222E3EA400EDEF10 /* UILabel+IMLbl.m */; };
+		6217C77F222E42A100EDEF10 /* UIView+IMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6217C77E222E42A100EDEF10 /* UIView+IMView.m */; };
+		6290B96E223F6A4B00BD61DF /* recever.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6290B96D223F6A4B00BD61DF /* recever.plist */; };
+		6290B975223F831900BD61DF /* BDIPAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6290B974223F831900BD61DF /* BDIPAlertCell.m */; };
+		6290B978223F834F00BD61DF /* BDIPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6290B977223F834F00BD61DF /* BDIPAlertView.m */; };
+		6290B97B223F838E00BD61DF /* XHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6290B97A223F838E00BD61DF /* XHToast.m */; };
+		6290B97F223F891C00BD61DF /* IMChatLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6290B97E223F891C00BD61DF /* IMChatLogCell.m */; };
+		62FF85722230A9CF00ADC57B /* IMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF85712230A9CF00ADC57B /* IMChatViewController.m */; };
+		62FF85752230B62900ADC57B /* IMChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF85742230B62900ADC57B /* IMChatModel.m */; };
+		62FF85782230BF1200ADC57B /* LoginUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF85772230BF1200ADC57B /* LoginUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +45,45 @@
 		6217C734222E06BF00EDEF10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6217C736222E06BF00EDEF10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6217C737222E06BF00EDEF10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6217C73F222E074F00EDEF10 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6217C740222E074F00EDEF10 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6217C745222E07E600EDEF10 /* IMPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMPrefixHeader.pch; sourceTree = "<group>"; };
+		6217C746222E08C700EDEF10 /* HttpUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUtils.h; sourceTree = "<group>"; };
+		6217C747222E08C700EDEF10 /* HttpUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpUtils.m; sourceTree = "<group>"; };
+		6217C749222E0A4300EDEF10 /* StringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		6217C74A222E0A4300EDEF10 /* StringUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
+		6217C74D222E12CE00EDEF10 /* NSString+IMStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+IMStr.h"; sourceTree = "<group>"; };
+		6217C74E222E12CE00EDEF10 /* NSString+IMStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+IMStr.m"; sourceTree = "<group>"; };
+		6217C750222E12F000EDEF10 /* NSDictionary+IMDict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+IMDict.h"; sourceTree = "<group>"; };
+		6217C751222E12F000EDEF10 /* NSDictionary+IMDict.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+IMDict.m"; sourceTree = "<group>"; };
+		6217C756222E21E500EDEF10 /* IMSocketUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSocketUtils.h; sourceTree = "<group>"; };
+		6217C757222E21E500EDEF10 /* IMSocketUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSocketUtils.m; sourceTree = "<group>"; };
+		6217C759222E3B5800EDEF10 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6217C76A222E3CF300EDEF10 /* ConstantPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantPart.h; sourceTree = "<group>"; };
+		6217C76B222E3D6000EDEF10 /* UIImage+IMImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+IMImg.h"; sourceTree = "<group>"; };
+		6217C76C222E3D6000EDEF10 /* UIImage+IMImg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IMImg.m"; sourceTree = "<group>"; };
+		6217C76E222E3EA400EDEF10 /* UILabel+IMLbl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+IMLbl.h"; sourceTree = "<group>"; };
+		6217C76F222E3EA400EDEF10 /* UILabel+IMLbl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+IMLbl.m"; sourceTree = "<group>"; };
+		6217C77D222E42A100EDEF10 /* UIView+IMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+IMView.h"; sourceTree = "<group>"; };
+		6217C77E222E42A100EDEF10 /* UIView+IMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+IMView.m"; sourceTree = "<group>"; };
+		6290B96D223F6A4B00BD61DF /* recever.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = recever.plist; sourceTree = "<group>"; };
+		6290B973223F831900BD61DF /* BDIPAlertCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDIPAlertCell.h; sourceTree = "<group>"; };
+		6290B974223F831900BD61DF /* BDIPAlertCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDIPAlertCell.m; sourceTree = "<group>"; };
+		6290B976223F834F00BD61DF /* BDIPAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDIPAlertView.h; sourceTree = "<group>"; };
+		6290B977223F834F00BD61DF /* BDIPAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDIPAlertView.m; sourceTree = "<group>"; };
+		6290B979223F838E00BD61DF /* XHToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHToast.h; sourceTree = "<group>"; };
+		6290B97A223F838E00BD61DF /* XHToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHToast.m; sourceTree = "<group>"; };
+		6290B97D223F891C00BD61DF /* IMChatLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMChatLogCell.h; sourceTree = "<group>"; };
+		6290B97E223F891C00BD61DF /* IMChatLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMChatLogCell.m; sourceTree = "<group>"; };
+		62FF85702230A9CF00ADC57B /* IMChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMChatViewController.h; sourceTree = "<group>"; };
+		62FF85712230A9CF00ADC57B /* IMChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMChatViewController.m; sourceTree = "<group>"; };
+		62FF85732230B62900ADC57B /* IMChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMChatModel.h; sourceTree = "<group>"; };
+		62FF85742230B62900ADC57B /* IMChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMChatModel.m; sourceTree = "<group>"; };
+		62FF85762230BF1200ADC57B /* LoginUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
+		62FF85772230BF1200ADC57B /* LoginUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginUtil.m; sourceTree = "<group>"; };
+		72E5FBD43EEBFE8345E9BAC2 /* Pods_IMDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A364DF39314C3194AD6665 /* Pods-IMDemos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDemos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMDemos/Pods-IMDemos.debug.xcconfig"; sourceTree = "<group>"; };
+		9CACE2EF62371E324961D6F2 /* Pods-IMDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDemos.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMDemos/Pods-IMDemos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6217C75A222E3B5800EDEF10 /* AVFoundation.framework in Frameworks */,
+				40B80D48DF4C8C1A7A53761C /* Pods_IMDemos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +104,8 @@
 			children = (
 				6217C727222E06BE00EDEF10 /* IMDemos */,
 				6217C726222E06BE00EDEF10 /* Products */,
+				74079CBD5667906207C88943 /* Pods */,
+				D4A0943122EBFED795162B47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +120,11 @@
 		6217C727222E06BE00EDEF10 /* IMDemos */ = {
 			isa = PBXGroup;
 			children = (
+				6290B966223F67ED00BD61DF /* Tools */,
+				6217C74C222E12A900EDEF10 /* Category */,
+				6217C743222E07AB00EDEF10 /* Utils */,
+				6217C742222E079600EDEF10 /* IM */,
+				6217C73E222E074100EDEF10 /* Login */,
 				6217C728222E06BE00EDEF10 /* AppDelegate.h */,
 				6217C729222E06BE00EDEF10 /* AppDelegate.m */,
 				6217C72B222E06BE00EDEF10 /* ViewController.h */,
@@ -67,8 +134,128 @@
 				6217C733222E06BF00EDEF10 /* LaunchScreen.storyboard */,
 				6217C736222E06BF00EDEF10 /* Info.plist */,
 				6217C737222E06BF00EDEF10 /* main.m */,
+				6217C745222E07E600EDEF10 /* IMPrefixHeader.pch */,
 			);
 			path = IMDemos;
+			sourceTree = "<group>";
+		};
+		6217C73E222E074100EDEF10 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6217C73F222E074F00EDEF10 /* LoginViewController.h */,
+				6217C740222E074F00EDEF10 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6217C742222E079600EDEF10 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				6290B97C223F890600BD61DF /* View */,
+				6217C75D222E3B9C00EDEF10 /* Controller */,
+				6217C75C222E3B8C00EDEF10 /* Model */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		6217C743222E07AB00EDEF10 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6217C746222E08C700EDEF10 /* HttpUtils.h */,
+				6217C747222E08C700EDEF10 /* HttpUtils.m */,
+				6217C749222E0A4300EDEF10 /* StringUtils.h */,
+				6217C74A222E0A4300EDEF10 /* StringUtils.m */,
+				6217C756222E21E500EDEF10 /* IMSocketUtils.h */,
+				6217C757222E21E500EDEF10 /* IMSocketUtils.m */,
+				6217C76A222E3CF300EDEF10 /* ConstantPart.h */,
+				62FF85762230BF1200ADC57B /* LoginUtil.h */,
+				62FF85772230BF1200ADC57B /* LoginUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6217C74C222E12A900EDEF10 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6217C74D222E12CE00EDEF10 /* NSString+IMStr.h */,
+				6217C74E222E12CE00EDEF10 /* NSString+IMStr.m */,
+				6217C750222E12F000EDEF10 /* NSDictionary+IMDict.h */,
+				6217C751222E12F000EDEF10 /* NSDictionary+IMDict.m */,
+				6217C76B222E3D6000EDEF10 /* UIImage+IMImg.h */,
+				6217C76C222E3D6000EDEF10 /* UIImage+IMImg.m */,
+				6217C76E222E3EA400EDEF10 /* UILabel+IMLbl.h */,
+				6217C76F222E3EA400EDEF10 /* UILabel+IMLbl.m */,
+				6217C77D222E42A100EDEF10 /* UIView+IMView.h */,
+				6217C77E222E42A100EDEF10 /* UIView+IMView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		6217C75C222E3B8C00EDEF10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62FF85732230B62900ADC57B /* IMChatModel.h */,
+				62FF85742230B62900ADC57B /* IMChatModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6217C75D222E3B9C00EDEF10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62FF85702230A9CF00ADC57B /* IMChatViewController.h */,
+				62FF85712230A9CF00ADC57B /* IMChatViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6290B966223F67ED00BD61DF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6290B972223F82F400BD61DF /* SecectView */,
+				6290B96D223F6A4B00BD61DF /* recever.plist */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6290B972223F82F400BD61DF /* SecectView */ = {
+			isa = PBXGroup;
+			children = (
+				6290B973223F831900BD61DF /* BDIPAlertCell.h */,
+				6290B974223F831900BD61DF /* BDIPAlertCell.m */,
+				6290B976223F834F00BD61DF /* BDIPAlertView.h */,
+				6290B977223F834F00BD61DF /* BDIPAlertView.m */,
+				6290B979223F838E00BD61DF /* XHToast.h */,
+				6290B97A223F838E00BD61DF /* XHToast.m */,
+			);
+			path = SecectView;
+			sourceTree = "<group>";
+		};
+		6290B97C223F890600BD61DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6290B97D223F891C00BD61DF /* IMChatLogCell.h */,
+				6290B97E223F891C00BD61DF /* IMChatLogCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74079CBD5667906207C88943 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78A364DF39314C3194AD6665 /* Pods-IMDemos.debug.xcconfig */,
+				9CACE2EF62371E324961D6F2 /* Pods-IMDemos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4A0943122EBFED795162B47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6217C759222E3B5800EDEF10 /* AVFoundation.framework */,
+				72E5FBD43EEBFE8345E9BAC2 /* Pods_IMDemos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6217C73B222E06BF00EDEF10 /* Build configuration list for PBXNativeTarget "IMDemos" */;
 			buildPhases = (
+				E7D216F8048F1B452682CE0A /* [CP] Check Pods Manifest.lock */,
 				6217C721222E06BE00EDEF10 /* Sources */,
 				6217C722222E06BE00EDEF10 /* Frameworks */,
 				6217C723222E06BE00EDEF10 /* Resources */,
+				C00E3F83D1A7F7C90F5624A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,20 +319,92 @@
 			files = (
 				6217C735222E06BF00EDEF10 /* LaunchScreen.storyboard in Resources */,
 				6217C732222E06BF00EDEF10 /* Assets.xcassets in Resources */,
+				6290B96E223F6A4B00BD61DF /* recever.plist in Resources */,
 				6217C730222E06BE00EDEF10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C00E3F83D1A7F7C90F5624A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IMDemos/Pods-IMDemos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMDemos/Pods-IMDemos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D216F8048F1B452682CE0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDemos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6217C721222E06BE00EDEF10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6217C741222E074F00EDEF10 /* LoginViewController.m in Sources */,
+				62FF85722230A9CF00ADC57B /* IMChatViewController.m in Sources */,
+				6290B97F223F891C00BD61DF /* IMChatLogCell.m in Sources */,
+				6217C748222E08C700EDEF10 /* HttpUtils.m in Sources */,
+				6290B978223F834F00BD61DF /* BDIPAlertView.m in Sources */,
+				6290B97B223F838E00BD61DF /* XHToast.m in Sources */,
+				6217C758222E21E500EDEF10 /* IMSocketUtils.m in Sources */,
+				6217C770222E3EA400EDEF10 /* UILabel+IMLbl.m in Sources */,
+				6290B975223F831900BD61DF /* BDIPAlertCell.m in Sources */,
 				6217C72D222E06BE00EDEF10 /* ViewController.m in Sources */,
+				6217C76D222E3D6000EDEF10 /* UIImage+IMImg.m in Sources */,
+				62FF85782230BF1200ADC57B /* LoginUtil.m in Sources */,
+				6217C77F222E42A100EDEF10 /* UIView+IMView.m in Sources */,
+				62FF85752230B62900ADC57B /* IMChatModel.m in Sources */,
 				6217C738222E06BF00EDEF10 /* main.m in Sources */,
+				6217C752222E12F000EDEF10 /* NSDictionary+IMDict.m in Sources */,
+				6217C74B222E0A4300EDEF10 /* StringUtils.m in Sources */,
 				6217C72A222E06BE00EDEF10 /* AppDelegate.m in Sources */,
+				6217C74F222E12CE00EDEF10 /* NSString+IMStr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +471,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IMDemos/IMPrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -267,6 +529,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IMDemos/IMPrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -283,9 +546,11 @@
 		};
 		6217C73C222E06BF00EDEF10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A364DF39314C3194AD6665 /* Pods-IMDemos.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F2CSH2FD9B;
 				INFOPLIST_FILE = IMDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,15 +559,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oykm.IMDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = IMDemos.development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6217C73D222E06BF00EDEF10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CACE2EF62371E324961D6F2 /* Pods-IMDemos.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F2CSH2FD9B;
 				INFOPLIST_FILE = IMDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oykm.IMDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = IMDemos.development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
