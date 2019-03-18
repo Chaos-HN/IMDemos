@@ -97,18 +97,24 @@
     
     // 注册
     [self.sockets on:@"register_ack" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
-        NSLog(@"注册===:%@",data);
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         NSDictionary *dict = @{@"datas":data};
-        [center postNotificationName:@"logCenter" object:@"注册成功" userInfo:dict];
+        NSString *titleStr = @"注册";
+        NSString *code = [data[0] getString:@"code"];
+        if ([code integerValue]==0) {
+            titleStr = @"注册成功";
+        } else {
+            titleStr = @"注册失败";
+        }
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center postNotificationName:@"logCenter" object:titleStr userInfo:dict];
     }];
     
     // 链接失败
     [self.sockets on:@"error" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
-        NSLog(@"链接失败===:%@",data);
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         NSDictionary *dict = @{@"datas":data};
-        [center postNotificationName:@"logCenter" object:@"链接失败" userInfo:dict];
+        NSString *titleStr = @"链接失败";
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center postNotificationName:@"logCenter" object:titleStr userInfo:dict];
     }];
     
     // 重新连接
@@ -129,19 +135,32 @@
     
     // 对方发送
     [self.sockets on:@"communicate" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
-        [self communicate:data[0]];
+        NSString *code = [data[0] getString:@"code"];
+        NSDictionary *dict = @{@"datas":data};
+        NSString *titleStr = @"对方发送";
+        if ([code integerValue]==0) {
+            titleStr = @"对方发送的";
+            [self communicate:data[0]];
+        } else {
+            titleStr = @"对方发送失败";
+        }
         NSLog(@"对方发送===:%@",data);
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        NSDictionary *dict = @{@"datas":data};
-        [center postNotificationName:@"logCenter" object:@"对方发送的" userInfo:dict];
+        [center postNotificationName:@"logCenter" object:titleStr userInfo:dict];
     }];
     
     // 发送方
     [self.sockets on:@"communicate_ack" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
-        NSLog(@"发送消息===:%@",data);
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        NSString *code = [data[0] getString:@"code"];
         NSDictionary *dict = @{@"datas":data};
-        [center postNotificationName:@"logCenter" object:@"我发送的" userInfo:dict];
+        NSString *titleStr = @"发送";
+        if ([code integerValue]==0) {
+            titleStr = @"发送成功";
+        } else {
+            titleStr = @"发送失败";
+        }
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center postNotificationName:@"logCenter" object:titleStr userInfo:dict];
     }];
     
     // 发送方是否已读

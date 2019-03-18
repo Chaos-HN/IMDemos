@@ -176,12 +176,17 @@
 
 - (void)recLog:(NSNotification *)noti
 {
-    NSArray *datas = [noti.userInfo getArray:@"datas"];
-    NSMutableDictionary *dicts = [NSMutableDictionary dictionary];
-    [dicts setObject:noti.object forKey:@"title"];
-    [dicts setObject:datas forKey:@"content"];
-    [self.datasArr insertObject:dicts atIndex:0];
-    [self.tableView reloadData];
+    NSString *titleStr = noti.object;
+    if ([titleStr rangeOfString:@"失败"].location != NSNotFound) {
+        [XHToast showTopWithText:[NSString stringWithFormat:@"**%@**",titleStr] duration:1.0];
+    } else {
+        NSArray *datas = [noti.userInfo getArray:@"datas"];
+        NSMutableDictionary *dicts = [NSMutableDictionary dictionary];
+        [dicts setObject:noti.object forKey:@"title"];
+        [dicts setObject:datas forKey:@"content"];
+        [self.datasArr insertObject:dicts atIndex:0];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)sendClick
@@ -189,7 +194,7 @@
     NSString *str = selectBtn.titleLabel.text;
     if ([StringUtils isNUllOrEmpty:msgTF.text]) {
         [XHToast showTopWithText:@"**发送内容不能为空**" duration:1.0];
-    } if ([str isEqualToString:@"选择接收人"]) {
+    } else if ([str isEqualToString:@"选择接收人"]) {
         [XHToast showTopWithText:@"**请选择接收人**" duration:1.0];
     } else {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
