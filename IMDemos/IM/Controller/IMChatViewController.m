@@ -35,8 +35,8 @@
     //监听对方发送来的信息
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(communicate:) name:@"rceMsg" object:nil];
     self.datasArr = [NSMutableArray array];
-    [self setUpViews];
     [[IMSocketUtils sharedManager] getIMServer];
+    [self setUpViews];
 }
 
 - (void)setUpViews
@@ -171,7 +171,6 @@
         make.left.equalTo(offBtn.mas_right).offset(15);
         make.centerY.equalTo(offBtn);
     }];
-    
 }
 
 - (void)recLog:(NSNotification *)noti

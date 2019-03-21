@@ -7,6 +7,8 @@
 //
 
 #import "HttpUtils.h"
+#import "IMSocketUtils.h"
+#import "LoginViewController.h"
 
 @interface HttpUtils()
 
@@ -111,11 +113,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if (![url containsString:@"login.do"] && ![url containsString:@"uploadclientId.do"]) {
-            @try {
-                block(RS_SUCCEED,responseObject);
-            } @catch (NSException *exception) {
-                NSLog(@"这里出错了====%@",exception);
-            }
+            [self jundgeRequestIsEffective:responseObject WithSuccessBlock:block];
             [self cancelRequest];
         } else {
             block(RS_SUCCEED,responseObject);
@@ -126,6 +124,36 @@
         [self cancelRequest];
     }];
     
+}
+
+#pragma mark---检测用户会话是否有效，无效登出
+- (void)jundgeRequestIsEffective:(id  _Nullable )responseObject WithSuccessBlock:(RequestResultBlock)block{
+    
+    NSString *str = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+    
+    if ([str containsString:@"80001"] && [str containsString:@"用户会话无效"]) { //登出
+        [[IMSocketUtils sharedManager] cutOffSocket];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:@"0" forKey:@"isLogin"];
+        [defaults synchronize];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"消息" message:@"登录无效，请重新登录" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *sureAction =[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            LoginViewController *loginVc = [[LoginViewController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVc];
+            [UIApplication sharedApplication].delegate.window.rootViewController = nav;
+        }];
+        [alertController addAction:sureAction];
+        [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+        
+    } else {
+        
+        @try {
+            block(RS_SUCCEED,responseObject);
+        } @catch (NSException *exception) {
+            NSLog(@"这里出错了====%@",exception);
+        }
+        
+    }
 }
 
 //取消网络请求

@@ -52,7 +52,11 @@
                     imServerStr = [NSString stringWithFormat:@"http://%@",host];
                 }
                 [self connectToServer:imServerStr];
+            } else {
+                [XHToast showTopWithText:@"接口问题，找彬哥！" duration:1.0];
             }
+        } else {
+            [XHToast showTopWithText:@"接口问题，找彬哥！" duration:1.0];
         }
     }];
 }
